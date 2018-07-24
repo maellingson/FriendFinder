@@ -1,4 +1,10 @@
-var friendsData = require("../data/friends.js")
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
+
+var app = express();
+
+var friendsData = require("../data/friends.js");
 
 app.get("/api/friends", function (req, res) {
     res.JSON(friendsData)
@@ -6,13 +12,16 @@ app.get("/api/friends", function (req, res) {
 
 app.post("/api/friends", function (req, res) {
     var newFriend = {
-        name = req.body.name,
-        photo = req.body.photo,
-        scores =[]
-    }
+    name: req.body.name,
+    photo: req.body.photo,
+    scores: []
+}
+
+
+    
     var scoresArray = [];
-    for (var i = 0; i < req.body.scores.length; i++) {
-        scoresArray.push(parseInt(req.body.scores[i]))
+    for (var i = 0; i < newFriend.scores.length; i++) {
+        scoresArray.push(parseInt(newFriend.scores[i]))
     }
 
     newFriend.scores = scoresArray;
@@ -37,4 +46,3 @@ app.post("/api/friends", function (req, res) {
 
 })
 
-module.exports = apiRoutes;

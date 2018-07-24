@@ -1,6 +1,10 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+require("./app/routing/apiRoutes.js");
+require("./app/routing/htmlRoutes.js");
+require("./app/data/friends");
+
 
 var app = express();
 var PORT = 8080;
@@ -11,12 +15,6 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use('/static', express.static(path.join(__dirname, 'app/public')))
-
-
-require("./app/routing/apiRoutes.js")(app);
-require("./app/routing/htmlRoutes.js")(app);
-
-
 
 
 app.listen(PORT, function(){

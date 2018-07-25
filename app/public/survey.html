@@ -191,12 +191,12 @@
         <footer class="footer">
             <div class="container">
                 <p>
-                    <a href="/./app/data/friends.js">API Friends List</a> |
+                    <a href="/./api/friends">API Friends List</a> |
                     <a href="https://github.com/maellingson/FriendFinder">GitHub Repo</a>
                 </p>
             </div>
     </div>
-    <div id="results-modal" class="modal fade" role="dialog">
+    <div id="resultsModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -222,88 +222,71 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
     <script type="text/javascript">
-    
-var express = require("express");
-var app = express();
 
-  var allFieldsCompleted;
-      $(document).ready(function() {
+        $(document).ready(function () {
+            $("#submit").on("click", function () {
 
+                function checkIfComplete() {
+                    var isValid = true;
+                    $(".validate").each(function () {
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+                    $(".browser-default").each(function () {
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+                    return isValid;
+                }
 
-        $("#submit").on("click", function() {
-          
+                if (checkIfComplete() === true) {
 
-          checkIfComplete(function(){
+                    var newFriend = {
+                        name: $("#name").val().trim(),
+                        photo: $("#photo").val().trim(),
+                        scores: [
+                            $("q1").val(),
+                            $("q2").val(),
+                            $("q3").val(),
+                            $("q4").val(),
+                            $("q5").val(),
+                            $("q6").val(),
+                            $("q7").val(),
+                            $("q8").val(),
+                            $("q9").val(),
+                            $("q10").val(),
+                        ]
+                    };
+                    var currentURL = window.location.origin;
 
-            if(allFieldsCompleted){
-              collectInputs();
-            }
-            else{
-              alert("Complete all the fields to find your friend! Otherwise you'll be lonely!");
-            }
-          }); 
-        });
-      }); 
+                    $.post(currentURL + "/api/friends", newFriend, function (data) {
+                        $("#matchName").text(data.name);
+                        $("matchImg").attr("src", data.photo);
+                    });
+                    $(".modal").modal();
+                    $("#name").val("");
+                    $("#photo").val("");
+                    $("#q1").val("");
+                    $("#q2").val("");
+                    $("#q3").val("");
+                    $("#q4").val("");
+                    $("#q5").val("");
+                    $("#q6").val("");
+                    $("#q7").val("");
+                    $("#q8").val("");
+                    $("#q9").val("");
+                    $("#q10").val("");
+                }
+                else {
+                    alert("Fill out ALL the fields to find your friend!")
+                }
+            })
 
-      function checkIfComplete(callback){
+});
 
-        var questionsCompleted;
-        $(".chosen-select").each(function(){
-          if ( $(this).val() == "" ){
-            questionsCompleted = false;
-          }
-        })
-  
-        .promise().done(function(){
-
-          if(questionsCompleted == false){
-            allFieldsCompleted = false;
-          }
-
-          else if( $("#formName").val() == "" ){
-            allFieldsCompleted = false;
-          }
-
-          else if( $("#formImage").val() == "" ){
-            allFieldsCompleted = false;
-          }
-
-          else{
-            allFieldsCompleted = true;
-          }
-
-          callback();       
-        });
-      }
-      function collectInputs(){
-
-        var newFriend = {
-          name: $("#formName").val(),
-          photo: $("#formImage").val(),
-          scores: []
-        };
-
-        var scoresArray = [];
-        $(".chosen-select").each(function(){
-          scoresArray.push( parseInt( $(this).val() ) );
-        })
-
-        .promise().done(function(){
-          
-
-          newFriend.scores = scoresArray;
-
-          var currentURL = window.location.origin;
-          app.post(currentURL + "/api/friends", newFriend, function(data){
-
-            $("#matchName").text(data.name);
-            $("#matchImg").attr('src', data.photo);
-
-            $("#resultsModal").modal("toggle");
-          }); 
-        });
-      }
-
-</script>
+    </script>
 </body>
+
 </html>

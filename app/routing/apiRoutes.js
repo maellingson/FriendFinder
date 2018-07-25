@@ -1,10 +1,14 @@
 var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
 
 var app = express();
 
 var friendsData = require("../data/friends.js");
+
+module.exports = function (app){
+    app.get("api/friends", function (req, res){
+        res.json(friendsData);
+    })
+}
 
 app.get("/api/friends", function (req, res) {
     res.JSON(friendsData)

@@ -224,16 +224,17 @@
     <script type="text/javascript">
 
         $(document).ready(function () {
-            $("#submit").on("click", function () {
+            $("#submit").on("click", function (event) {
+                event.preventDefault();
 
                 function checkIfComplete() {
                     var isValid = true;
-                    $(".validate").each(function () {
+                    $(".form-control").each(function () {
                         if ($(this).val() === "") {
                             isValid = false;
                         }
                     });
-                    $(".browser-default").each(function () {
+                    $(".chosen-select").each(function () {
                         if ($(this).val() === "") {
                             isValid = false;
                         }
@@ -279,12 +280,14 @@
                     $("#q9").val("");
                     $("#q10").val("");
                 }
-                else {
+                else{
+
                     alert("Fill out ALL the fields to find your friend!")
+
                 }
             })
 
-});
+        });
 
     </script>
 </body>

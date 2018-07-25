@@ -2,51 +2,35 @@ var express = require("express");
 
 var app = express();
 
-var friendsData = require("../data/friends.js");
+var friendsData = require("../data/friends");
 
-module.exports = function (app){
-    app.get("api/friends", function (req, res){
+module.exports = function (app) {
+    app.get("api/friends", function (req, res) {
         res.json(friendsData);
     })
 }
 
-app.get("/api/friends", function (req, res) {
-    res.JSON(friendsData)
-});
-
 app.post("/api/friends", function (req, res) {
-    var newFriend = {
-    name: req.body.name,
-    photo: req.body.photo,
-    scores: []
-}
-
-
-    
+    var newFriendScores = req.body.scores;
     var scoresArray = [];
-    for (var i = 0; i < newFriend.scores.length; i++) {
-        scoresArray.push(parseInt(newFriend.scores[i]))
-    }
+    var friendCount = 0;
+    var match = 0;
 
-    newFriend.scores = scoresArray;
-
-    var compareScores = [];
     for (var i = 0; i < friendsData.length; i++) {
-        var activeCompare = 0;
-        for (var x = 0; x < newFriend.scores.length; x++) {
-            activeCompare += math.abs(newFriend.scores[x] - friendsData[i].scores[x])
-            compareScores.push(activeCompare);
+        var diffScores = 0;
+        for (var j = 0; j < newFriendScores.length; j++) {
+            diffScores += (Math.abs(parseInt(friendsData[i].scores[j]) - parseInt(newFriendScores[j])));
         }
-        var compatScores = 0;
-        for (var i = 1; i < friendsData.length; i++) {
-            if (compareScores[i] <= compareScores[compatScores]) {
-                compatScores = i;
-            }
-        }
-        var bestFriend = friendsData[compatScores];
-        res.json(bestFriend);
-        friendsData.push(newFriend);
+        scoresArray.push(diffScores);
+    }
+    for (var i=0; i<scoresArray.length; i++){
+        if (scoresArray[i] <= scoresArray[match]){
+            match = i;
+        }  
     }
 
-})
+    var bestFriend = friendsData[match];
+    res.json(bestFriend);
+    friendsData.push(req.body);
+});
 

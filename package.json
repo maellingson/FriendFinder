@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/maellingson/FriendFinder/issues"
   },
-  "homepage": "https://github.com/maellingson/FriendFinder#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",

@@ -1,38 +1,28 @@
-.imgcontainer {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+body{
+    background-color: black;
+    font-family: 'Roboto Mono', monospace;
 }
+
 
 .directions{
     color:#ff1515;
-    position: absolute;
     top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    margin: 20px;
+   text-align: center;
 }
 
 
 .surveybtn{
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     background-color: #ff1515;
     color: black;
     font-size: 16px;
     padding: 12px 24px;
     border: solid black 3px;
-    cursor: pointer;
     border-radius: 5px;
     text-align: center;
-    max-width: 400px;
-
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+    
 }

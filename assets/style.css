@@ -1,29 +1,38 @@
+.imgcontainer {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .directions{
     color:#ff1515;
     position: absolute;
-    top: 55%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
 }
 
-.btncontainer{
-    position: relative;
-    width: 50%;
-}
 
 .surveybtn{
     position: absolute;
-    top: 50%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #1e193c;
-    color: white;
+    background-color: #ff1515;
+    color: black;
     font-size: 16px;
     padding: 12px 24px;
-    border: none;
+    border: solid black 3px;
     cursor: pointer;
     border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
 
 }

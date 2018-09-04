@@ -1,9 +1,9 @@
 var friendsData = [
     {
         name: "Mike Wheeler",
-        photo: "http://pm1.narvii.com/6186/7526a40089639df7bc8c5f83cd66e43b834842f8_00.jpg",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/6/62/Will_S2.png/revision/latest/scale-to-width-down/620?cb=20180107170847",
         scores: [
-            4,
+            1,
             5,
             4,
             5,
@@ -19,7 +19,7 @@ var friendsData = [
         name: "Eleven",
         photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/1/10/Eleven_S2.png/revision/latest?cb=20171017130709",
         scores: [
-            4,
+            5,
             3,
             4,
             2,
@@ -36,7 +36,7 @@ var friendsData = [
         name: "Dustin Henderson",
         photo: "https://data.whicdn.com/images/303274299/large.jpg",
         scores: [
-            5,
+            4,
             5,
             5,
             5,
@@ -87,7 +87,7 @@ var friendsData = [
         name: "Steve Harrington",
         photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/7/78/Image.jpg/revision/latest?cb=20171113113237",
         scores: [
-            2,
+            1,
             3,
             1,
             2,
@@ -104,7 +104,7 @@ var friendsData = [
         name: "Nancy Wheeler",
         photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/5/5d/Nancy_S2.png/revision/latest/scale-to-width-down/310?cb=20171229091940",
         scores: [
-            4,
+            2,
             3,
             2,
             4,
@@ -120,6 +120,70 @@ var friendsData = [
     {
         name: "Max Mayfield",
         photo: "https://strangerthingsttu.weebly.com/uploads/1/1/4/5/114552629/max-2.png",
+        scores: [
+            1,
+            1,
+            5,
+            2,
+            3,
+            4,
+            5,
+            2,
+            1,
+            3
+        ]
+    },
+    {
+        name: "Joyce Byers",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/7/70/Joyce_S2.png/revision/latest/scale-to-width-down/620?cb=20180319181049",
+        scores: [
+            2,
+            1,
+            5,
+            2,
+            3,
+            4,
+            5,
+            2,
+            1,
+            3
+        ]
+    },
+    {
+        name: "Barb Holland",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/46/Barbara_Holland.png/revision/latest?cb=20170314234835",
+        scores: [
+            2,
+            1,
+            5,
+            2,
+            3,
+            4,
+            5,
+            2,
+            1,
+            3
+        ]
+    },
+    {
+        name: "Jonathan Byers",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/0/0b/Jonathan-Byers-Season-2.png/revision/latest?cb=20180206233841",
+        scores: [
+            2,
+            1,
+            5,
+            2,
+            3,
+            4,
+            5,
+            2,
+            1,
+            3
+        ]
+    },
+    {
+        name: "Jim Hopper",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/b/bc/Jim_Hopper_S2.png/revision/latest?cb=20180327084010",
         scores: [
             2,
             1,

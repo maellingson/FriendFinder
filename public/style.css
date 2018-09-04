@@ -1,15 +1,25 @@
 body{
     background-color: black;
     font-family: 'Roboto Mono', monospace;
+
 }
 
 
-.directions{
+
+.bodytext{
     color:#ff1515;
     top: 70%;
     left: 50%;
     margin: 20px;
    text-align: center;
+}
+
+.survey{
+    color:#ff1515;
+    top: 70%;
+   text-align: left;
+   margin-top: 60px;
+   margin-bottom: 20px;
 }
 
 
@@ -22,7 +32,143 @@ body{
     border-radius: 5px;
     text-align: center;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    margin-top: 30px;
     display: block;
+    width: 400px;
     
 }
+body {
+    background: #000;
+  }
+
+  
+  #Christmas_Lights {
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .light_cord {
+    fill: none;
+    stroke: #174700;
+  }
+  
+  .light_fixture {
+    fill: #134413;
+  }
+  
+  .red_bulb {
+    fill: #ca2128;
+    stroke: darkred;
+    stroke-miterlimit: 10;
+  }
+  
+  .green_bulb {
+    fill: #2d754a;
+    stroke: darkgreen;
+    stroke-miterlimit: 10;
+  }
+  
+  .blue_bulb {
+    fill: #2c3ea8;
+    stroke: darkblue;
+    stroke-miterlimit: 10;
+  }
+  
+  .white_bulb {
+    fill: #f5eed7;
+    stroke: #6d6d6d;
+    stroke-miterlimit: 10;
+  }
+  
+  .gold_bulb {
+    fill: #ffcc5e;
+    stroke: goldenrod;
+    stroke-miterlimit: 10;
+  }
+  
+  
+  .bulb {
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: glow;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+    animation-name: glow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    0% {
+      fill-opacity: 0.25;
+    }
+    100% {
+      fill-opacity: 1;
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      fill-opacity: 0.25;
+    }
+    100% {
+      fill-opacity: 1;
+    }
+  }
+    
+  .blink-1 {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+  }
+  
+  .blink-2 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  
+  .blink-3 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  
+  .blink-4 {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+  }
+  
+  .blink-5 {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+  
+  .blink-6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  
+  .blink-7 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  
+  .blink-8 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+  
+  .blink-9 {
+    -webkit-animation-delay: 0.95s;
+    animation-delay: 0.95s;
+  }
+  
+  .blink-10 {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+  }
+  

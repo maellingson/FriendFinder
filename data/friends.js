@@ -1,7 +1,7 @@
 var friendsData = [
     {
         name: "Mike Wheeler",
-        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/6/62/Will_S2.png/revision/latest/scale-to-width-down/620?cb=20180107170847",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/48/Mike_Wheeler_S1.png/revision/latest/scale-to-width-down/620?cb=20171025205131",
         scores: [
             1,
             5,

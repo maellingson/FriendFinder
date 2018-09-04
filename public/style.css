@@ -1,10 +1,7 @@
 body{
     background-color: black;
     font-family: 'Roboto Mono', monospace;
-
 }
-
-
 
 .bodytext{
     color:#ff1515;
@@ -38,9 +35,6 @@ body{
     width: 400px;
     
 }
-body {
-    background: #000;
-  }
 
   
   #Christmas_Lights {
@@ -48,7 +42,7 @@ body {
     margin: 0;
     position: absolute;
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
   }
   
   .light_cord {

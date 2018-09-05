@@ -1,7 +1,7 @@
 var friendsData = [
     {
         name: "Mike Wheeler",
-        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/48/Mike_Wheeler_S1.png/revision/latest/scale-to-width-down/620?cb=20171025205131",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/7/75/Mike_Wheeler_Season_2.jpg/revision/latest/scale-to-width-down/619?cb=20180318115800",
         scores: [
             1,
             2,
@@ -34,7 +34,7 @@ var friendsData = [
 
     {
         name: "Dustin Henderson",
-        photo: "https://data.whicdn.com/images/303274299/large.jpg",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/3/3b/Dustin_Henderson.jpg/revision/latest?cb=20161021183800",
         scores: [
             4,
             1,
@@ -51,7 +51,7 @@ var friendsData = [
 
     {
         name: "Lucas Sinclair",
-        photo: "https://pm1.narvii.com/6739/bec914eb918f987e4122f0f7e33ab6da878a8041v2_00.jpg",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/0/03/Lucas_S2.png/revision/latest?cb=20180107171723",
         scores: [
             3,
             2,
@@ -102,7 +102,7 @@ var friendsData = [
 
     {
         name: "Nancy Wheeler",
-        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/5/5d/Nancy_S2.png/revision/latest/scale-to-width-down/310?cb=20171229091940",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/7/7f/NancyWheeler.png/revision/latest?cb=20160819170317",
         scores: [
             3,
             3,
@@ -119,7 +119,7 @@ var friendsData = [
 
     {
         name: "Max Mayfield",
-        photo: "https://strangerthingsttu.weebly.com/uploads/1/1/4/5/114552629/max-2.png",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/3/32/Max.png/revision/latest/scale-to-width-down/619?cb=20170213160116",
         scores: [
             1,
             3,
@@ -135,7 +135,7 @@ var friendsData = [
     },
     {
         name: "Joyce Byers",
-        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/7/70/Joyce_S2.png/revision/latest/scale-to-width-down/620?cb=20180319181049",
+        photo: "https://vignette.wikia.nocookie.net/strangerthings8338/images/0/0c/Joyce_portrait.jpg/revision/latest?cb=20161021184428",
         scores: [
             5,
             4,
